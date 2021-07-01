@@ -1,10 +1,19 @@
 <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
     <p>Hello, World!</p>
+    <% if (logged) { %>
+        <a class="w3-button w3-blue">Edit</a>
+    <% } %>
 </div>
 <div class="w3-row-padding">
     <div class="w3-col 13 m6 w3-margin-bottom">
         <div class="w3-display-container">
+            <% if (logged) { %>
+                <div class="w3-display-bottomright w3-row" style="width: 100%;">
+                  <a class="w3-half w3-button w3-blue">Edit</a>
+                  <a class="w3-half w3-button w3-red">Delete</a>
+                </div>
+              <% } %>
             <img src="images/team/2.jpg" alt="John" style="width: 100%" />
         </div>
         <h3>John Doe</h3>
@@ -14,6 +23,12 @@
     </div>
     <div class="w3-col 13 m6 w3-margin-bottom">
         <div class="w3-display-container">
+            <% if (logged) { %>
+                <div class="w3-display-bottomright w3-row" style="width: 100%;">
+                  <a class="w3-half w3-button w3-blue">Edit</a>
+                  <a class="w3-half w3-button w3-red">Delete</a>
+                </div>
+              <% } %>
             <img src="images/team/1.jpg" alt="Jane" style="width: 100%" />
         </div>
         <h3>Jane Doe</h3>
@@ -23,6 +38,12 @@
     </div>
     <div class="w3-col 13 m6 w3-margin-bottom">
         <div class="w3-display-container">
+            <% if (logged) { %>
+                <div class="w3-display-bottomright w3-row" style="width: 100%;">
+                  <a class="w3-half w3-button w3-blue">Edit</a>
+                  <a class="w3-half w3-button w3-red">Delete</a>
+                </div>
+              <% } %>
             <img src="images/team/3.jpg" alt="Mike" style="width: 100%" />
         </div>
         <h3>Mike Ross</h3>
@@ -32,7 +53,13 @@
     </div>
     <div class="w3-col 13 m6 w3-margin-bottom">
         <div class="w3-display-container">
-            <img src="images/team/5.jpg" alt="Dan" style="width: 100%" />
+            <% if (logged) { %>
+                <div class="w3-display-bottomright w3-row" style="width: 100%;">
+                  <a class="w3-half w3-button w3-blue">Edit</a>
+                  <a class="w3-half w3-button w3-red">Delete</a>
+                </div>
+              <% } %>
+            <img src="images/team/4.jpg" alt="Dan" style="width: 100%" />
         </div>
         <h3>Dan Star</h3>
         <p class="w3-opacity">Architect</p>

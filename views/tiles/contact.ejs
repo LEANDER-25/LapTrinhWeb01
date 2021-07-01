@@ -30,6 +30,9 @@
       required
       name="comment"
     />
-    <button class="w3-button W3-black" type="submit">SEND MESSAGE</button>
+    <button class="w3-button w3-black" type="submit">POST MESSAGE</button>
+    <% if (logged) { %>
+      <a class="w3-button w3-green w3-right" title="View messages">&#9776;</a>
+    <% } %>
   </form>
 </div>
