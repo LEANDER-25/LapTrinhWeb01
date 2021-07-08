@@ -31,3 +31,13 @@ exports.saveGeneralInfo = function (info, featureImageTmpPath, callback) {
         callback(false);
     });
 }
+
+exports.loadAbout = function (callback){
+    fs.readFile(path('about.txt'), function (err, data){
+        callback(data);
+    });
+}
+
+exports.saveAbout = function (text, callback){
+    fs.writeFile(path('about.txt'), text, callback);
+}
