@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title><%= generalInfo.companyNameShort %> <%= generalInfo.companyNameLong %> - Edit general info</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="showroom.css">
+<body>
+    <%- include('tiles/navbar') %>
+    <br>
+    <div class="w3-content w3-padding w3-card" style="max-width:500px">
+        <div class="w3-container w3-padding-32">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Add Product</h3>
+            <% if (errorMessage) { %>
+                <div class="w3-text-red"><p><%= errorMessage %></p></div>
+            <% } %>
+            <form method="POST" action="" enctype="multipart/form-data">
+                <p>
+                    <label>Product name</label>
+                    <input class="w3-input w3-border fixedinput" type="text" name="productName" required>
+                </p>
+                <p>
+                    <label>Product image (.jpg)</label>
+                    <input type="file" class="w3-input w3-border fixedinput" name="productImage" accept=".jpg" required>
+                </p>
+                <div class="w3-center">
+                    <button type="submit" class="w3-button w3-black">SAVE</button>
+                    <a class="w3-button w3-black" href="<%= root %>#products">CANCEL</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

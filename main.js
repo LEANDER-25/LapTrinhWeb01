@@ -46,12 +46,32 @@ router.post('/edit-general-info', upload.single('featureImage'), function(reques
     controller('edit-general-info').post(request, response, webconfig, model);
 });
 
+//about------------------------------------------------
+
 router.get('/edit-about', function(request, response){
     controller('edit-about').get(request, response, webconfig, model);
 });
 
 router.post('/edit-about', urlencodeParser, function(request, response){
     controller('edit-about').post(request, response, webconfig, model);
+});
+
+//product----------------------------------------------
+
+router.get('/add-product', function(request, response){
+    controller('add-product').get(request, response, webconfig, model);
+});
+
+router.post('/add-product', upload.single('productImage'), function(request, response){
+    controller('add-product').post(request, response, webconfig, model);
+});
+
+router.get('/edit-product', function(request, response){
+    controller('edit-product').get(request, response, webconfig, model);
+});
+
+router.post('/edit-product', upload.single('productImage'), function(request, response){
+    controller('edit-product').post(request, response, webconfig, model);
 });
 
 app.use(webconfig.root, router);
