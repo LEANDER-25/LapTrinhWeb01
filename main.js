@@ -74,6 +74,10 @@ router.post('/edit-product', upload.single('productImage'), function(request, re
     controller('edit-product').post(request, response, webconfig, model);
 });
 
+router.get('/delete-product', function(request, response){
+    controller('delete-product').get(request, response, webconfig, model);
+});
+
 app.use(webconfig.root, router);
 
 //start web app

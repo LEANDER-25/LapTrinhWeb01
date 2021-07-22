@@ -18,7 +18,7 @@
       <% if (logged) { %>
         <div class="w3-display-bottomright w3-row" style="width: 100%;">
           <a class="w3-half w3-button w3-blue" href="<%= root %>edit-product?id=<%= product.id %>">Edit</a>
-          <a class="w3-half w3-button w3-red">Delete</a>
+          <a class="w3-half w3-button w3-red" href="<%= root %>delete-product?id=<%= product.id %>" onclick="return confirm('Delete this item? Are you sure about that?')">Delete</a>
         </div>
       <% } %>
     </div>

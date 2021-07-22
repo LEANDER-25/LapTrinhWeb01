@@ -139,3 +139,13 @@ exports.loadSingleProduct = function (productId, callback) {
     var productFilePath = getProductsFolder() + '/' + productId + '.json';
     loadProduct(productId, productFilePath, callback);
 }
+
+exports.deleteProduct = function (productId, callback) {
+    fs.unlink(getProductsFolder() + '/' + productId + '.json', function (err) {
+        if(err){
+            callback(err);
+            return;
+        }
+        fs.unlink('public/images/products/' + productId + '.jpg', callback);
+    });
+}

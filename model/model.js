@@ -59,6 +59,7 @@ exports.create = function (datasource) {
                 callback(false);
             });
         },
-        getProduct: datasource.loadSingleProduct
+        getProduct: datasource.loadSingleProduct,
+        deleteProduct: datasource.deleteProduct
     }
 }
